@@ -1,0 +1,522 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "game guru",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GameInfoIntent",
+                    "slots": [
+                        {
+                            "name": "gioco",
+                            "type": "List_of_games"
+                        }
+                    ],
+                    "samples": [
+                        "regole",
+                        "regole del gioco",
+                        "spiegami il gioco",
+                        "dimmi le regole",
+                        "spiegami le regole",
+                        "regole della {gioco}",
+                        "Quali sono le regole del {gioco}",
+                        "Spiegami come si gioca a {gioco}",
+                        "Dimmi come si gioca a {gioco}",
+                        "Come si gioca a {gioco}",
+                        "regole del {gioco}",
+                        "Dimmi le regole di {gioco}",
+                        "Dimmi le regole del {gioco} ",
+                        "Spiegami le regole di {gioco}",
+                        "Spiegami le regole del {gioco}"
+                    ]
+                },
+                {
+                    "name": "StartGameIntent",
+                    "slots": [
+                        {
+                            "name": "gioco",
+                            "type": "List_of_games"
+                        },
+                        {
+                            "name": "giocatoreuno",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "giocatoredue",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "giocatoretre",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "giocatorequattro",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "giocatorecinque",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "giocatoresei",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "inizia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} {giocatorequattro} {giocatorecinque} e {giocatoresei}",
+                        "avvia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} {giocatorequattro} {giocatorecinque} e {giocatoresei}",
+                        "inizia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} {giocatorequattro} e {giocatorecinque}",
+                        "avvia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} {giocatorequattro} e {giocatorecinque}",
+                        "inizia una partita di {gioco} con {giocatoreuno} {giocatoredue} e {giocatoretre}",
+                        "avvia una partita di {gioco} con {giocatoreuno} {giocatoredue} e {giocatoretre}",
+                        "inizia una partita di {gioco} con {giocatoreuno} e {giocatoredue}",
+                        "avvia una partita di {gioco} con {giocatoreuno} e {giocatoredue}",
+                        "inizia una partita",
+                        "avvia una partita",
+                        "inizia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} ed {giocatorequattro}",
+                        "inizia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} e {giocatorequattro}",
+                        "inizia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} {giocatorequattro}",
+                        "avvia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} ed {giocatorequattro}",
+                        "avvia una partita di {gioco} con {giocatoreuno} {giocatoredue} {giocatoretre} {giocatorequattro}"
+                    ]
+                },
+                {
+                    "name": "UpdateScoreIntent",
+                    "slots": [
+                        {
+                            "name": "operazione",
+                            "type": "Update_Score_Operations"
+                        },
+                        {
+                            "name": "punti",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "giocatore",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "{operazione} {punti} punto da {giocatore}",
+                        "{operazione} {punti} punto a {giocatore}",
+                        "{operazione} {punti} punti da {giocatore}",
+                        "{operazione} {punti} punti a {giocatore}"
+                    ]
+                },
+                {
+                    "name": "GetScoresIntent",
+                    "slots": [],
+                    "samples": [
+                        "punteggi",
+                        "qual è il punteggio",
+                        "dimmi i punti",
+                        "come siamo messi",
+                        "chi sta vincendo",
+                        "dimmi i punteggi",
+                        "Classifica",
+                        "Dimmi quale è la classifica",
+                        "Quale è la classifica",
+                        "Dimmi la classifica del gioco",
+                        "Dimmi la classifica"
+                    ]
+                },
+                {
+                    "name": "EndGameIntent",
+                    "slots": [],
+                    "samples": [
+                        "abbiamo finito",
+                        "chiudi la partita",
+                        "concludi la partita",
+                        "partita finita",
+                        "fine partita",
+                        "termina la partita"
+                    ]
+                },
+                {
+                    "name": "GetHistoryIntent",
+                    "slots": [
+                        {
+                            "name": "giocatore",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "gioco",
+                            "type": "List_of_games"
+                        }
+                    ],
+                    "samples": [
+                        "storico vincitori",
+                        "quante volte {giocatore} ha vinto a {gioco} ",
+                        "quante partite ha vinto {giocatore} a {gioco}",
+                        "vincitori di {gioco}",
+                        "chi ha vinto di più a {gioco}",
+                        "chi vince di più a {gioco}",
+                        "storico partite",
+                        "dimmi le vittorie",
+                        "quante vittorie ha {giocatore}",
+                        "dimmi la classifica dei vincitori",
+                        "chi ha vinto di più",
+                        "dimmi lo storico"
+                    ]
+                },
+                {
+                    "name": "RandomGameIntent",
+                    "slots": [],
+                    "samples": [
+                        "sorteggia di nuovo un altro gioco",
+                        "consigliami di nuovo a cosa giocare",
+                        "consigliami un altro gioco",
+                        "sorteggia un altro gioco",
+                        "consigliami a cosa giocare",
+                        "consigliami un gioco",
+                        "sorprendimi",
+                        "non so a cosa giocare",
+                        "scegli un gioco a caso",
+                        "sorteggia un gioco"
+                    ]
+                },
+                {
+                    "name": "EndTurnIntent",
+                    "slots": [],
+                    "samples": [
+                        "andiamo avanti",
+                        "andiamo avanti con il turno",
+                        "procediamo con il prossimo turno",
+                        "procediamo con il turno successivo",
+                        "passiamo al prossimo turno",
+                        "abbiamo concluso il turno",
+                        "abbiamo finito il turno",
+                        "turno concluso",
+                        "prossimo turno",
+                        "turno finito",
+                        "Fine turno"
+                    ]
+                },
+                {
+                    "name": "ClearHistoryIntent",
+                    "slots": [],
+                    "samples": [
+                        "Rimuovi dalla memoria i vincitori",
+                        "Rimuovi storico vincitori",
+                        "Rimuovi storico",
+                        "Cancella dalla memoria i vincitori",
+                        "Ripristina storico vincitori",
+                        "Cancella storico vincitori",
+                        "Pulisci storico vincitori",
+                        "Ripristina storico",
+                        "Cancella storico",
+                        "Pulisci storico"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AbandonGameIntent",
+                    "slots": [],
+                    "samples": [
+                        "annulla partita corrente",
+                        "rimuovi partita corrente",
+                        "cancella partita corrente",
+                        "annulla partita",
+                        "rimuovi partita",
+                        "cancella partita"
+                    ]
+                },
+                {
+                    "name": "AskRulesIntent",
+                    "slots": [
+                        {
+                            "name": "gioco",
+                            "type": "List_of_games"
+                        },
+                        {
+                            "name": "domanda",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "ti volevo chiedere una domanda di {gioco}",
+                        "ti volevo chiedere una cosa di {gioco}",
+                        "ti volevo chiedere {domanda}",
+                        "vorrei sapere {domanda}",
+                        "la mia domanda è {domanda}",
+                        "Ho una domanda da farti sulle regole di {gioco}",
+                        "Ho una domanda sulle regole di {gioco}",
+                        "Posso chiederti una cosa su {gioco}",
+                        "Voglio farti una domanda sulle regole di {gioco}",
+                        "Posso farti una domanda sulle regole di {gioco}",
+                        "Posso farti una domanda su {gioco}",
+                        "Voglio farti una domanda su {gioco}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "List_of_games",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "gin rummy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "machiavelli"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "scala quaranta"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ramino"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "peppa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cacace"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Update_Score_Operations",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Togli"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Aggiungi"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "StartGameIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "gioco",
+                            "type": "List_of_games",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.703912603792.1644882322444"
+                            }
+                        },
+                        {
+                            "name": "giocatoreuno",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.419271862488.1496566963980"
+                            }
+                        },
+                        {
+                            "name": "giocatoredue",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "giocatoretre",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "giocatorequattro",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "giocatorecinque",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "giocatoresei",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "GameInfoIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "gioco",
+                            "type": "List_of_games",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "GetHistoryIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "giocatore",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "gioco",
+                            "type": "List_of_games",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "ClearHistoryIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.376321462588"
+                    },
+                    "slots": []
+                },
+                {
+                    "name": "AbandonGameIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1598508513484"
+                    },
+                    "slots": []
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.419271862488.294810475355",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Di quale gioco vuoi avviare una partita?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.419271862488.1496566963980",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Con quali giocatori?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.98542768587.96777135243",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Con quali giocatori?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.98542768587.299339703591",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Con quali giocatori"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.98542768587.698209779478",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Con quali giocatori?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.703912603792.1644882322444",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Di quale gioco?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.376321462588",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Sicuro di voler rimuovere dalla memoria lo storico dei vincitori?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1598508513484",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Sei sicuro di voler cancellare la partita corrente?"
+                    }
+                ]
+            }
+        ]
+    }
+}
