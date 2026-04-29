@@ -18,7 +18,7 @@ Include le seguenti funzionalità:
 ---
 
 👥 Autori - Progetto personale
-Andrea Tito - https://github.com/And0503
+- Andrea Tito - https://github.com/And0503
 
 ---
 
