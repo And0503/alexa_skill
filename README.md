@@ -62,9 +62,9 @@ Include le seguenti funzionalità:
 ### 🚀 Come eseguire il progetto
 1. Creare account amazon developer console
 2. Aprire online la amazon developer console
-3. creare la skill con nome di invocazione game guru
-4. importare codice in code
-5. importare modello di interazione in build
+3. Creare la skill con nome di invocazione game guru
+4. Importare codice in code
+5. Importare modello di interazione in build
 6. Fare save, deploy e build
 7. Avviare in Test la modalità Development
 8. Usare la skill sui propri dispositivi alexa o da amazon developer console
