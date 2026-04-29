@@ -43,7 +43,7 @@ Include le seguenti funzionalità:
 | `requirements.txt` | Dipendenze Python |
 | `storage/repository.py` | Interfaccia persistenza |
 | `storage/dynamo_repository.py` | Persistenza su AWS DynamoDB |
-| `storage/testing/in_memory_repository.py` | Repository test tramite session_attributes (senza DynamoDB) |
+| `storage/testing/in_memory_repository.py` | Repository di test con session_attributes (senza DynamoDB) |
 
 ---
 
